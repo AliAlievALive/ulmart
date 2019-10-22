@@ -8,6 +8,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Potty extends Product {
+    private long id;
+    private String group;
+    private String name;
+    private int price;
+    private int rating;
     private String color;
     private int maxWeight;
 }

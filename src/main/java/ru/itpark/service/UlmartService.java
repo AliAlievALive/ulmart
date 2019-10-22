@@ -23,7 +23,7 @@ public class UlmartService {
     if (item.getPrice() <= 0) {
       throw new IllegalArgumentException("price must be greater than zero");
     }
-    if (item.getName().equals("")) {
+    if (item.getBrand().equals("")) {
       throw new IllegalArgumentException("name don't must be empty");
     }
     repository.save(item);

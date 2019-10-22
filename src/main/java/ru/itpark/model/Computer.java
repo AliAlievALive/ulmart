@@ -8,7 +8,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Computer extends Product {
-    private int id;
+    private long id;
+    private String group;
+    private String name;
+    private int price;
+    private int rating;
     private String brand;
     private String os;
     private int ramSize;
