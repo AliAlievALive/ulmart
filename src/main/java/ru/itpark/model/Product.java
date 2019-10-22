@@ -11,7 +11,6 @@ public class Product implements Comparable<Product> {
     private long id;
     private String name;
     private int price;
-    private String group;
     private int rating;
 
     @Override
