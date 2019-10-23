@@ -67,9 +67,4 @@ public class ProductRepository {
     }
     return computers;
   }
-
-  /*public void remove(long id) {
-//      List<Product> products = new LinkedList<>();
-      products.removeIf(this.id -> id == id)
-  }*/
 }

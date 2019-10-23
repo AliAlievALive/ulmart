@@ -28,5 +28,7 @@ public class Main {
         Collection<Product> newProducts = service.getSortedById();
         service.addAll(newProducts);
         System.out.println(service.getSortedBy((o1, o2) -> o1.getBrand().compareToIgnoreCase(o2.getBrand())));
+        service.remove(18);
+        System.out.println(service.getSortedBy((o1, o2) -> o1.getBrand().compareToIgnoreCase(o2.getBrand())));
     }
 }

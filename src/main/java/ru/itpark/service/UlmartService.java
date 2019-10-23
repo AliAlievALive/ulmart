@@ -73,4 +73,9 @@ public class UlmartService {
     result.sort(comparator);
     return result;
   }
+
+  public void remove(long id) {
+    Collection<Product> products= repository.getAll();
+    products.removeIf(i -> i.getId() == id);
+  }
 }
