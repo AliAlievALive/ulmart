@@ -10,12 +10,19 @@ public class ProductRepository {
   private final Collection<Product> products = new LinkedList<>();
   private long nextId = 1;
 
-  public void save(Product item) {
+    public void save(Product item) {
     if (item.getId() == 0) {
       item.setId(nextId++);
     }
     products.add(item);
   }
+
+/*  public void save(Collection<Product> newProducts) {
+      for (Product newProduct : newProducts) {
+          newProduct.setId(nextId++);
+          save(newProduct);
+      }
+  }*/
 
   public Collection<Product> getAll() {
     return products;
@@ -60,4 +67,9 @@ public class ProductRepository {
     }
     return computers;
   }
+
+  /*public void remove(long id) {
+//      List<Product> products = new LinkedList<>();
+      products.removeIf(this.id -> id == id)
+  }*/
 }

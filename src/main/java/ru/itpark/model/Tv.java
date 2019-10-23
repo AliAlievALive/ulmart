@@ -9,10 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Tv extends Product {
     private long id;
-    private String group;
+    private String brand;
     private int price;
     private int rating;
-    private String brand;
     private int diagonal;
     private int colors;
     private boolean smart;

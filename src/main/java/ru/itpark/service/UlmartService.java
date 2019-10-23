@@ -1,10 +1,12 @@
 package ru.itpark.service;
 
+import ru.itpark.comparator.ProductByIdAscComparator;
 import ru.itpark.comparator.ProductByNameAscComparator;
 import ru.itpark.comparator.ProductByPriceAscComparator;
 import ru.itpark.model.Product;
 import ru.itpark.repository.ProductRepository;
 
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
@@ -27,6 +29,17 @@ public class UlmartService {
       throw new IllegalArgumentException("name don't must be empty");
     }
     repository.save(item);
+  }
+
+  public void addAll(Collection<Product> products) {
+    for (Product product : products) {
+      product.setId(0);
+      repository.save(product);
+    }
+  }
+
+  public List<Product> getSortedById() {
+    return getSortedBy(new ProductByIdAscComparator());
   }
 
   public List<Product> getSortedByPrice() {

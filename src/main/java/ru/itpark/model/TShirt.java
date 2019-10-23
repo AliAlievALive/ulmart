@@ -9,10 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TShirt extends Product {
     private long id;
-    private String group;
+    private String brand;
     private int price;
     private int rating;
-    private String brand;
     private String color;
     private int size;
 }
