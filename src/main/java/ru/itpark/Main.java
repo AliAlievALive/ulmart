@@ -8,6 +8,7 @@ import ru.itpark.repository.ProductRepository;
 import ru.itpark.service.UlmartService;
 
 import java.util.Collection;
+import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,7 +26,12 @@ public class Main {
         System.out.println(service.getSortedPhonesBy((o1, o2) -> o1.getBrand().compareToIgnoreCase(o2.getBrand())));
         System.out.println(service.getSortedBy((o1, o2) -> o1.getBrand().compareToIgnoreCase(o2.getBrand())));
 
-        Collection<Product> newProducts = service.getSortedById();
+        Collection<Product> newProducts = new LinkedList<>();
+        newProducts.add(new Tv(0, "Sovet", 25_000, 2, 54, 500_000, true));
+        newProducts.add(new Tv(0, "ChinaTv", 25_000, 2, 54, 500_000, true));
+        newProducts.add(new Tv(0, "Sony", 25_000, 2, 54, 500_000, true));
+        newProducts.add(new Tv(0, "Philips", 25_000, 2, 54, 500_000, true));
+
         service.addAll(newProducts);
         System.out.println(service.getSortedBy((o1, o2) -> o1.getBrand().compareToIgnoreCase(o2.getBrand())));
         service.remove(18);
