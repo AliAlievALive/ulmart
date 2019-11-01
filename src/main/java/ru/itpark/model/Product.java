@@ -14,6 +14,43 @@ public class Product implements Comparable<Product> {
     private String brand;
     private int price;
     private int rating;
+    private String type;
+
+    /*public Product(long id, String brand, int price, int rating, String type) {
+        this.id = id;
+        this.brand = brand;
+        this.price = price;
+        this.rating = rating;
+        this.type = type;
+    }*/
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     @Override
     public boolean equals(Object o) {

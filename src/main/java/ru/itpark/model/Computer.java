@@ -15,8 +15,8 @@ public class Computer extends Product {
     private int hardSize;
     private int Cores;
 
-    public Computer(long id, String brand, int price, int rating, String os, int ramSize, int hardSize, int cores) {
-        super(id, brand, price, rating);
+    public Computer(long id, String brand, int price, int rating, String type, String os, int ramSize, int hardSize, int cores) {
+        super(id, brand, price, rating, type);
         this.os = os;
         this.ramSize = ramSize;
         this.hardSize = hardSize;

@@ -14,8 +14,8 @@ public class Phone extends Product {
     private int ramSize;
     private boolean haveNFC;
 
-    public Phone(long id, String brand, int price, int rating, String os, int ramSize, boolean haveNFC) {
-        super(id, brand, price, rating);
+    public Phone(long id, String brand, int price, int rating, String type, String os, int ramSize, boolean haveNFC) {
+        super(id, brand, price, rating, type);
         this.os = os;
         this.ramSize = ramSize;
         this.haveNFC = haveNFC;

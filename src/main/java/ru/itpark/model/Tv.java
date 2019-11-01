@@ -12,8 +12,8 @@ public class Tv extends Product {
     private int colors;
     private boolean smart;
 
-    public Tv(long id, String brand, int price, int rating, int diagonal, int colors, boolean smart) {
-        super(id, brand, price, rating);
+    public Tv(long id, String brand, int price, int rating, String type, int diagonal, int colors, boolean smart) {
+        super(id, brand, price, rating, type);
         this.diagonal = diagonal;
         this.colors = colors;
         this.smart = smart;

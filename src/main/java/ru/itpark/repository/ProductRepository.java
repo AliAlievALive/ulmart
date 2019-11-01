@@ -28,43 +28,13 @@ public class ProductRepository {
     return products;
   }
 
-  public Collection<Product> getPhones() {
-    List<Product> phones = new LinkedList<>();
+  public Collection<Product> getProductsWithType(String itemType) {
+    List<Product> items = new LinkedList<>();
     for (Product product : products) {
-      if (product instanceof Phone) {
-        phones.add(product);
+      if (product.getType().equals(itemType)) {
+        items.add(product);
       }
     }
-    return phones;
-  }
-
-  public Collection<Product> getTvs() {
-    List<Product> tvs = new LinkedList<>();
-    for (Product tv : products) {
-      if (tv instanceof Tv) {
-        tvs.add(tv);
-      }
-    }
-    return tvs;
-  }
-
-  public Collection<Product> getTShirts() {
-    List<Product> tShirts = new LinkedList<>();
-    for (Product tShirt : products) {
-      if (tShirt instanceof TShirt) {
-        tShirts.add(tShirt);
-      }
-    }
-    return tShirts;
-  }
-
-  public Collection<Product> getComputers() {
-    List<Product> computers = new LinkedList<>();
-    for (Product computer : products) {
-      if (computer instanceof Computer) {
-        computers.add(computer);
-      }
-    }
-    return computers;
+    return items;
   }
 }

@@ -13,6 +13,12 @@ public class Potty extends Product {
     private String color;
     private int maxWeight;
 
+    public Potty(long id, String brand, int price, int rating, String type, String color, int maxWeight) {
+        super(id, brand, price, rating, type);
+        this.color = color;
+        this.maxWeight = maxWeight;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

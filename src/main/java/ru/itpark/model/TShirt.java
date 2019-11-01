@@ -13,8 +13,8 @@ public class TShirt extends Product {
     private String color;
     private int size;
 
-    public TShirt(long id, String brand, int price, int rating, String color, int size) {
-        super(id, brand, price, rating);
+    public TShirt(long id, String brand, int price, int rating, String type, String color, int size) {
+        super(id, brand, price, rating, type);
         this.color = color;
         this.size = size;
     }
