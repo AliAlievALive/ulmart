@@ -13,11 +13,13 @@ import java.util.List;
 
 public class UlmartService {
   private final ProductRepository repository;
-  private Comparator<Product> comparator = new ProductByPriceAscComparator();
+  private Comparator<Product> defaultComparator;
+
 
 
   public UlmartService(ProductRepository repository) {
     this.repository = repository;
+    defaultComparator = new ProductByPriceAscComparator();
   }
 
   public void add(Product item) {
@@ -69,19 +71,19 @@ public class UlmartService {
   }
 
   public List<Product> getSortedPhonesBy(Comparator<Product> comparator) {
-    List<Product> result = new LinkedList<>(repository.getPhones());
+    List<Product> result = new LinkedList<>(repository.getProductsWithType("Phones"));
     result.sort(comparator);
     return result;
   }
 
   public List<Product> getSortedTvsBy(Comparator<Product> comparator) {
-    List<Product> result = new LinkedList<>(repository.getTvs());
+    List<Product> result = new LinkedList<>(repository.getProductsWithType("TVs"));
     result.sort(comparator);
     return result;
   }
 
   public List<Product> getSortedTShirtsBy(Comparator<Product> comparator) {
-    List<Product> result = new LinkedList<>(repository.getPhones());
+    List<Product> result = new LinkedList<>(repository.getProductsWithType("T-Shirt"));
     result.sort(comparator);
     return result;
   }

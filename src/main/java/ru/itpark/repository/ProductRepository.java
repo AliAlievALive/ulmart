@@ -17,13 +17,6 @@ public class ProductRepository {
     products.add(item);
   }
 
-/*  public void save(Collection<Product> newProducts) {
-      for (Product newProduct : newProducts) {
-          newProduct.setId(nextId++);
-          save(newProduct);
-      }
-  }*/
-
   public Collection<Product> getAll() {
     return products;
   }
