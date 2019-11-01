@@ -41,7 +41,7 @@ public class Tv extends Product {
 
     @Override
     public String toString() {
-        return super.toString() + "Tv{" +
+        return "Tv{" + super.toString() +
                 "diagonal=" + diagonal +
                 ", colors=" + colors +
                 ", smart=" + smart +

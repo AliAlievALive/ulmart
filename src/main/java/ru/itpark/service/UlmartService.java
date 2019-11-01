@@ -60,7 +60,7 @@ public class UlmartService {
 
   public List<Product> getSortedBy() {
     List<Product> result = new LinkedList<>(repository.getAll());
-    result.sort(comparator);
+    result.sort(defaultComparator);
     return result;
   }
 

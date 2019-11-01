@@ -39,8 +39,8 @@ public class TShirt extends Product {
 
     @Override
     public String toString() {
-        return super.toString() + "TShirt{" +
-                "color='" + color + '\'' +
+        return "TShirt{" + super.toString() +
+                "color='" + color +
                 ", size=" + size +
                 "} ";
     }

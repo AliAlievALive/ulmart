@@ -47,8 +47,8 @@ public class Computer extends Product {
 
     @Override
     public String toString() {
-        return super.toString() + "Computer{" +
-                "os='" + os + '\'' +
+        return "Computer{" + super.toString() +
+                "os='" + os +
                 ", ramSize=" + ramSize +
                 ", hardSize=" + hardSize +
                 ", Cores=" + Cores +

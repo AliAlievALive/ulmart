@@ -43,8 +43,8 @@ public class Phone extends Product {
 
     @Override
     public String toString() {
-        return super.toString() + "Phone{" +
-                "os='" + os + '\'' +
+        return "Phone{" + super.toString() +
+                "os=" + os +
                 ", ramSize=" + ramSize +
                 ", haveNFC=" + haveNFC +
                 "} ";

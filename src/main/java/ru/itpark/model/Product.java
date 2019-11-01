@@ -16,14 +16,6 @@ public class Product implements Comparable<Product> {
     private int rating;
     private String type;
 
-    /*public Product(long id, String brand, int price, int rating, String type) {
-        this.id = id;
-        this.brand = brand;
-        this.price = price;
-        this.rating = rating;
-        this.type = type;
-    }*/
-
     public long getId() {
         return id;
     }
@@ -75,5 +67,14 @@ public class Product implements Comparable<Product> {
     @Override
     public int compareTo(Product o) {
         return rating - o.rating;
+    }
+
+    @Override
+    public String toString() {
+        return  "id = " + id +
+                ", brand = " + brand +
+                ", price = " + price +
+                ", rating = " + rating +
+                ", type = " + type + " ";
     }
 }
